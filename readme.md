@@ -14,4 +14,5 @@
 - Retrofit
 - Gson
 - Paging 3
+- DiffUtil
 - LiveData, ViewModel

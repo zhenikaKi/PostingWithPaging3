@@ -1,0 +1,69 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/item_list_padding"
+    android:paddingEnd="@dimen/item_list_padding"
+    android:paddingBottom="@dimen/item_list_padding">
+
+    <!-- дата поcта -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginTop="@dimen/item_list_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- заголовок -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date"/>
+
+    <!-- иконка избранного -->
+    <ImageView
+        android:id="@+id/icon_favorite"
+        android:layout_width="@dimen/item_list_icon_size"
+        android:layout_height="@dimen/item_list_icon_size"
+        android:layout_marginTop="@dimen/item_list_padding"
+        android:src="@drawable/icon_favorite"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"/>
+
+    <!-- количество избранного -->
+    <TextView
+        android:id="@+id/favorite_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_list_count_padding"
+        app:layout_constraintStart_toEndOf="@id/icon_favorite"
+        app:layout_constraintTop_toTopOf="@id/icon_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/icon_favorite"/>
+
+    <!-- иконка комментариев -->
+    <ImageView
+        android:id="@+id/icon_comment"
+        android:layout_width="@dimen/item_list_icon_size"
+        android:layout_height="@dimen/item_list_icon_size"
+        android:layout_marginTop="@dimen/item_list_padding"
+        android:layout_marginEnd="@dimen/item_list_count_comment_padding"
+        android:src="@drawable/icon_comment"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- количество комментариев -->
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_list_count_padding"
+        app:layout_constraintStart_toEndOf="@id/icon_comment"
+        app:layout_constraintTop_toTopOf="@id/icon_comment"
+        app:layout_constraintBottom_toBottomOf="@id/icon_comment"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
